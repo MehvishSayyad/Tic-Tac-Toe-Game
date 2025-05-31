@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe AI & Two-Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe</h1>
+
+        <!-- Mode Selection -->
+        <label for="mode">Select Mode:</label>
+        <select id="mode" onchange="changeMode()">
+            <option value="ai">Play vs AI</option>
+            <option value="twoPlayer">Two-Player Mode</option>
+        </select>
+
+        <div class="game-area">
+            <!-- Game Board -->
+            <div class="board" id="board"></div>
+
+            <!-- Score Table -->
+            <div class="scoreboard">
+                <h2>Scoreboard</h2>
+                <table>
+                    <tr>
+                        <th>Player X</th>
+                        <th>Player O / AI</th>
+                        <th>Draws</th>
+                    </tr>
+                    <tr>
+                        <td id="playerXScore">0</td>
+                        <td id="playerOScore">0</td>
+                        <td id="drawScore">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <h2 id="status"></h2>
+        <button onclick="resetGame()">Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
